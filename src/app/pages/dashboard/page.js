@@ -66,7 +66,7 @@ const DashBoard = () => {
               </div>
             </div>
             <div className='w-full md:w-[100%] h-[50vh] col-span-4'>
-              <Image src={"/assets/images/eventimage.jpg"} className='h-[50vh] w-full' height={"1200"} width={"1000"} />
+              <Image alt="#" src={"/assets/images/eventimage.jpg"} className='h-[50vh] w-full' height={"1200"} width={"1000"} />
             </div>
           </div>
           <section>
@@ -78,7 +78,7 @@ const DashBoard = () => {
                     return (
                       <div key={elm.id} className='px-3 py-3'>
                         <div className='image-container w-[100%]'>
-                          <img className='image border' style={{ width: "100%", height: "100%" }} src={elm.image} alt={elm.name} />
+                          <Image  width="100%" height="100%" className='image border' style={{ width: "100%", height: "100%" }} src={elm.image} alt={elm.name} />
 
                           <div className='overlay'>
                             <Link href={{
