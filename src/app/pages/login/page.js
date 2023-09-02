@@ -2,6 +2,8 @@
 
 import postData from '@/app/components/api/postApi';
 import Layout from '@/app/components/layout/layout';
+import Image from 'next/image';
+import Link from 'next/link';
 import { useRouter, usePathname, useSearchParams } from 'next/navigation'
 import { ProgressSpinner } from 'primereact/progressspinner';
 import React,{useState} from 'react';
@@ -59,10 +61,12 @@ const Login = () => {
         {/* Left column container with background */}
         <div className="g-6 flex h-full flex-wrap items-center justify-center ">
           <div className="shrink-1 mb-12 grow-0 basis-auto md:mb-0 md:w-9/12 md:shrink-0 lg:w-6/12 xl:w-6/12">
-            <img
+            <Image
               src="https://tecdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
               className="w-full"
               alt="Sample image"
+              height={100}
+              width={100}
             />
           </div>
 
@@ -197,27 +201,27 @@ const Login = () => {
 
               {/* Login button */}
               <div className="text-center lg:text-left">
-                <a
-                  type="button"
-                  href='javascript:void(0)'
-                  className="inline-block bg-[#3b71ca] text-[20px] text-[#fff] px-5 py-3 rounded "
-                  data-te-ripple-init
-                  data-te-ripple-color="light"
-                  onClick={handleSubmit}
-                >
-                  Login
-                </a>
+              <a
+  type="button"
+  href="javascript:void(0)"
+  className="inline-block bg-[#3b71ca] text-[20px] text-[#fff] px-5 py-3 rounded "
+  data-te-ripple-init
+  data-te-ripple-color="light"
+  onClick={handleSubmit}
+>
+  Login
+</a>
 
                 {/* Register link */}
-                <p className="mb-0 mt-2 pt-1 text-sm font-semibold">
-                  Don't have an account?
+                <div className="mb-0 mt-2 pt-1 text-sm font-semibold">
+                Don&apos;t have an account?
                   <a
-                    href="/pages/resister"
-                    className="text-danger transition duration-150 ease-in-out hover:text-danger-600 focus:text-danger-600 active:text-danger-700"
-                  >
-                    Register
-                  </a>
-                </p>
+  href="/pages/register"
+  className="text-danger transition duration-150 ease-in-out hover:text-danger-600 focus:text-danger-600 active:text-danger-700"
+>
+  Register
+</a>
+                </div>
               </div>
             </form>
           </div>

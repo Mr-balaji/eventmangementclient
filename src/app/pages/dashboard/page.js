@@ -57,16 +57,16 @@ const DashBoard = () => {
         <>
           <div className='grid grid-cols-1 md:grid-cols-10  gap-4 xl:flex-row pt-[80px] px-3 items-center flex-row p-[1rem] max-w-[73.25rem] w-[100%] m-auto md:flex-col '>
             <div className='w-full md:w-[80%] px-5 col-span-6'>
-              <h1 className='font-bold text-3xl md:text-[2.625rem]'>Let's Celebrate Is Our Platform.</h1>
+              <h1 className='font-bold text-3xl md:text-[2.625rem]'>Let&apos; Celebrate Is Our Platform.</h1>
               <p className='text-lg md:text-[1.25rem] mt-2'>
-                The Event Management System is designed to improve efficiency, enhance attendee experience, and maximize the success of events. Whether it's a small corporate meeting, a large conference, or a community gathering, this platform provides the tools and features necessary to manage all aspects of the event lifecycle. With its user-friendly interface, real-time collaboration, and robust reporting capabilities, it is the ultimate solution for professional event management.
+                The Event Management System is designed to improve efficiency, enhance attendee experience, and maximize the success of events. Whether it&apos; a small corporate meeting, a large conference, or a community gathering, this platform provides the tools and features necessary to manage all aspects of the event lifecycle. With its user-friendly interface, real-time collaboration, and robust reporting capabilities, it is the ultimate solution for professional event management.
               </p>
               <div className='mt-6'>
                 <Link href="" className='border px-4 py-2 md:py-4 font-bold text-lg md:text-[20px] bg-blue rounded-xl text-white'>Book A Demo</Link>
               </div>
             </div>
             <div className='w-full md:w-[100%] h-[50vh] col-span-4'>
-              <Image alt="#" src={"/assets/images/eventimage.jpg"} className='h-[50vh] w-full' height={"1200"} width={"1000"} />
+              <Image src={"/assets/images/eventimage.jpg"} className='h-[50vh] w-full' height={"1200"} width={"1000"} />
             </div>
           </div>
           <section>
@@ -78,7 +78,7 @@ const DashBoard = () => {
                     return (
                       <div key={elm.id} className='px-3 py-3'>
                         <div className='image-container w-[100%]'>
-                          <Image  width="100%" height="100%" className='image border' style={{ width: "100%", height: "100%" }} src={elm.image} alt={elm.name} />
+                          <img className='image border' style={{ width: "100%", height: "100%" }} src={elm.image} alt={elm.name} />
 
                           <div className='overlay'>
                             <Link href={{
@@ -89,8 +89,8 @@ const DashBoard = () => {
                             </Link>
                           </div>
                         </div>
-                        <h2 className='text-xl md:text-[30px] font-semibold'>{elm.name}</h2>
-                        <p className='text-base md:text-[15px]'>{elm.description}</p>
+                        <h2 className='text-xl md:text-[30px] font-semibold'>{elm.name.replace(/'/g, '&apos;')}</h2>
+                        <p className='text-base md:text-[15px]'>{elm.description.replace(/'/g, '&apos;')}</p>
                       </div>
                     )
                   })
