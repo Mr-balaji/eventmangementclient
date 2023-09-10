@@ -2,6 +2,7 @@
 
 import React from 'react'
 import Top from './top'
+import { Metadata } from 'next'
 //theme
 import "primereact/resources/themes/lara-light-indigo/theme.css";
 
@@ -9,7 +10,7 @@ import "primereact/resources/themes/lara-light-indigo/theme.css";
 import "primereact/resources/primereact.min.css";
 
 
-const Layout = ({children}) => {
+export async function Layout({children}){
 
   return (
     <div>
